@@ -1,18 +1,15 @@
 # coding: utf-8
-import paho.mqtt.client as mqtt
 import time
 import random
 import json
-import certifi
-import socks
 import os
-from sunday.tools.zhipin.zhipin import Zhipin
+from sunday.tools.zhipin.zhipin import ZhipinWeb, Zhipin
 from sunday.tools.zhipin.message import chatProtocolDecode
 from sunday.tools.zhipin.handler import presenceHandler, textHandler, iqHandler, readHandler
 from sunday.tools.zhipin.params import ZHIPIN_CHAT_CMDINFO
-from sunday.tools.imrobot import Xiaoi, Moli, Qingyunke
-from sunday.core import Logger, getParser, enver
+from sunday.core import Logger, getParser
 from pydash import get
+from sunday.tools.zhipin.initialize import mqttInit, robotInit
 
 messageAutoUid = []
 
@@ -34,12 +31,27 @@ defaultTip = {
         }
 
 class ZhipinClient():
-    def __init__(self):
+    def __init__(
+            self,
+            msgConfigFile=None,
+            msgConfigJson=None,
+            isRobot=False,
+            isRobotDefaultOpen=False,
+            isPlayback=False,
+            msgCacheFileIn=None,
+            msgCacheFileOut=None,
+            session=None,
+        ):
+        self.session = session
+        self.msgConfigFile = msgConfigFile
+        self.msgConfigJson = msgConfigJson
+        self.isRobot = isRobot
+        self.isRobotDefaultOpen = isRobotDefaultOpen
+        self.isPlayback = isPlayback
+        self.msgCacheFileIn = msgCacheFileIn
+        self.msgCacheFileOut = msgCacheFileOut
+
         self.logger = Logger('ZHIPIN MQTT').getLogger()
-        self.clientId = "ws-" + randomStr()
-        self.server = 'ws.zhipin.com'
-        self.port = 443
-        self.path = '/chatws'
         # 聊天机器人
         self.robot = None
         self.xiaoi = None
@@ -75,8 +87,6 @@ class ZhipinClient():
             self.sendPresence(self.userInfo)
             # time.sleep(1)
             self.autoParseMessage()
-        (data, buff) = textHandler('haha', {'uid': 555547565}, {'uid': 27904943, 'encryptUid': 'bfb5c693853bd21d1XNz29m0FFE~' }, self.userInfo)
-        self.send('chat', buff, 1, True)
 
     def on_message(self, client, userdata, message):
         self.logger.info('接收到消息, topic: %s, qos: %d, flag: %d' %
@@ -277,9 +287,24 @@ class ZhipinClient():
     def init(self):
         self.zhipinInit()
         # 初始化智能聊天机器人
-        if self.isRobot: self.robotInit()
+        if self.isRobot:
+            pwd = os.path.dirname(os.path.abspath(__file__))
+            self.xiaoi, self.moli, self.qingyunke = robotInit(pwd, self.logger)
+            self.robot = True
         # 初始化聊天服务
-        if not self.isPlayback: self.muttInit()
+        if not self.isPlayback:
+            self.client = mqttInit(
+                clientId="ws-" + randomStr(),
+                url='ws.zhipin.com',
+                port=443,
+                path='/chatws',
+                username=self.userInfo['token'] + '|0',
+                password=self.password,
+                cookies=self.cookies,
+                on_connect=self.on_connect,
+                on_message=self.on_message,
+                logger=self.logger,
+                isProxy=False)
         if self.msgConfigFile:
             # 解析回复模版
             try:
@@ -288,45 +313,15 @@ class ZhipinClient():
             except Exception as e:
                 self.logger.error('消息回复模版解析失败，请检查文件%s内容是否为JSON格式'
                         % self.msgConfigFile.name)
+        if self.msgConfigJson:
+            # 解析回复字串
+            self.selfMessageObj = self.msgConfigJson
 
     def zhipinInit(self):
-        self.zhipin = Zhipin()
+        self.zhipin = ZhipinWeb(self.session) if self.session else Zhipin()
         self.userInfo = self.zhipin.getUserInfo()
         self.password = self.zhipin.getPassword()
         self.cookies = self.zhipin.getCookies()
-
-    def robotInit(self):
-        # 初始化机器人
-        xiaoi = Xiaoi()
-        xiaoi.open()
-        xiaoi.heartbeat()
-        self.xiaoi = xiaoi
-        self.logger.info('初始化xiaoi机器人')
-        pwd = os.path.dirname(os.path.abspath(__file__))
-        (getenv, setenv, getfile) = enver(os.path.join(pwd, '.env'))
-        key = getenv('MOLI_KEY')
-        secret = getenv('MOLI_SECRET')
-        if key and secret:
-            self.moli = Moli(key=key, secret=secret)
-            self.logger.info('初始化moli机器人')
-        self.qingyunke = Qingyunke()
-        self.logger.info('初始化qingyunke机器人')
-        self.robot = True
-
-
-    def muttInit(self):
-        # 初始化聊天服务
-        client = mqtt.Client(client_id=self.clientId, transport='websockets')
-        client.enable_logger(self.logger)
-        client.on_connect = self.on_connect
-        client.on_message = self.on_message
-        client.username_pw_set(self.userInfo['token'] + '|0', self.password)
-        client.ws_set_options(self.path, headers={ 'Cookie': self.cookies })
-        client.tls_set(certifi.where())
-        client.tls_insecure_set(True)
-        # client.proxy_set(proxy_type=socks.HTTP, proxy_addr='127.0.0.1', proxy_port=8888)
-        client.connect(self.server, self.port, 60)
-        self.client = client
 
     def runByCache(self):
         if not self.msgCacheFileIn:
@@ -361,4 +356,5 @@ def runcmd():
 
 if __name__ == "__main__":
     runcmd()
+
 

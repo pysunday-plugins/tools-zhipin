@@ -8,3 +8,5 @@ getGeekFriendListUrl = baseUrl + '/zprelation/friend/getGeekFriendList.json?page
 bossdataUrl = baseUrl + '/zpgeek/chat/bossdata.json?bossId=%d&bossSource=%d'
 
 historyMsgUrl = baseUrl + '/zpchat/geek/historyMsg?bossId=%s&c=%d&page=%d'
+
+jobListUrl = baseUrl + '/zpgeek/mobile/search/joblist.json?%s'

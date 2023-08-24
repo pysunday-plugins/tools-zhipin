@@ -4,11 +4,12 @@ import sys
 import re
 import argparse
 from pprint import pprint
+from urllib.parse import urlencode
 from sunday.tools.zhipin import config
 from sunday.login.zhipin import Zhipin as ZhipinLogin
 from sunday.login.zhipin.config import getUserInfo
 from sunday.tools.zhipin.params import ZHIPIN_CMDINFO
-from sunday.core import Logger, getParser
+from sunday.core import Logger, getParser, Fetch
 from pydash import get, find
 
 class Zhipin():
@@ -20,11 +21,13 @@ class Zhipin():
         if isInit: self.init()
 
     def init(self):
-        self.zhipin = ZhipinLogin().login().rs
+        self.zhipin = ZhipinLogin()
+        self.zhipin.login()
+        self.rs = self.zhipin.rs
 
     def getUserInfo(self):
         if self.userInfo: return self.userInfo
-        self.userInfo = self.zhipin.get(getUserInfo).json()['zpData']
+        self.userInfo = self.rs.get(getUserInfo).json()['zpData']
         # self.logger.debug('userInfo: %s' % self.userInfo)
         return self.userInfo
 
@@ -34,13 +37,13 @@ class Zhipin():
         return token
 
     def getPassword(self):
-        wt = self.zhipin.get(config.wt).json()
+        wt = self.rs.get(config.wt).json()
         password = get(wt, 'zpData.wt2')
         # self.logger.debug('password: %s' % password)
         return password
 
     def getCookies(self):
-        cookieObj = self.zhipin.getCookiesDict()
+        cookieObj = self.rs.getCookiesDict()
         cookieArr = ['{}={}'.format(key, val) for (key, val) in cookieObj.items()]
         cookieStr = '; '.join(cookieArr)
         # self.logger.debug('cookies: %s' % cookieStr)
@@ -48,7 +51,7 @@ class Zhipin():
 
     def getGeekFriendList(self):
         if not self.geekFriendList:
-            res = self.zhipin.get(config.getGeekFriendListUrl).json()
+            res = self.rs.get(config.getGeekFriendListUrl).json()
             self.geekFriendList = get(res, 'zpData.result')
             # self.logger.debug('geekFriendList: %s' % self.geekFriendList)
         return self.geekFriendList
@@ -60,14 +63,14 @@ class Zhipin():
         return friend
 
     def bossdata(self, uid, source=0):
-        res = self.zhipin.get(config.bossdataUrl % (int(uid), source)).json()
+        res = self.rs.get(config.bossdataUrl % (int(uid), source)).json()
         ans = (get(res, 'zpData.data'), get(res, 'zpData.job'))
         # self.logger.debug('bossdata: %d => %s' % (int(uid), ans))
         return ans
 
     def historyMsg(self, bossId, count=20, page=1, mid=None):
         # 获取聊天记录
-        res = self.zhipin.get(config.historyMsgUrl % (bossId, count, page)).json()
+        res = self.rs.get(config.historyMsgUrl % (bossId, count, page)).json()
         ans = get(res, 'zpData.messages')
         if mid and type(ans) == list:
             ans = find(ans, lambda m: m.get('mid') == mid)
@@ -88,8 +91,35 @@ class Zhipin():
             self.bossInfo[bossInfo.get(uid)] = bossInfo
         return bossInfo
 
+    def getJob(self):
+        # self.zhipin.setZpStoken()
+        params = {
+            'experience': 106,
+            'page': 2,
+            'city': '101020100',
+            'query': 'Python'
+        }
+        res = self.rs.get_json(config.jobListUrl % urlencode(params))
+        hasMore = get(res, 'zpData.hasMore')
+        html = get(res, 'zpData.html')
+
+
+class ZhipinWeb(Zhipin):
+    """
+    用于Web服务调用
+    """
+    def __init__(self, session):
+        Zhipin.__init__(self, False)
+        self.rs = Fetch()
+        if session is not None:
+            for key, val in session.items():
+                self.rs.setCookie(key, val, '.zhipin.com')
+
 
 class ZhipinSelf(Zhipin):
+    """
+    用于命令行调用
+    """
     def __init__(self):
         Zhipin.__init__(self, False)
 
@@ -117,6 +147,11 @@ class ZhipinSelf(Zhipin):
             history = self.getHistoryMsg(self.bossId[0], mid=self.messageId)
             pprint(history)
 
+    def jobHandler(self):
+        # job子命令
+        jobs = self.getJob()
+        pprint(jobs)
+
     def run(self):
         self.init()
         if self.subName == 'boss':
@@ -127,6 +162,8 @@ class ZhipinSelf(Zhipin):
             self.friendHandler()
         elif self.subName == 'history':
             self.historyHandler()
+        elif self.subName == 'job':
+            self.jobHandler()
 
 
 def runcmd():

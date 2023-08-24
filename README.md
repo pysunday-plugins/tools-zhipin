@@ -55,3 +55,8 @@ Optional:
     zhipin_chat --robot --config /path/to/name.json --playback --messsage-in /path/to/message.log
 ```
 
+# 实用技巧
+
+## 1. 解决命令行登录与网页登录冲突问题
+
+执行`zhipin_login2brower`后将结果复制到浏览器控制台执行

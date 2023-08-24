@@ -40,6 +40,7 @@ ZHIPIN_CMDINFO = {
             },
         ],
         'user': [ ],
+        'job': [ ],
         'friend': [
             {
                 'name': ['friendId'],
