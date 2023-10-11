@@ -1,0 +1,45 @@
+{
+	"messages": [{
+		"bizId": "296",
+		"bizType": 101,
+		"body": {
+			"extend": "",
+			"headTitle": "",
+			"templateId": 1,
+			"text": "Boss您好，我对您发布的职位非常感兴趣，可以把简历发给您吗？",
+			"type": 1
+		},
+		"cmid": "0",
+		"flag": 0,
+		"from": {
+			"avatar": "https://img.bosszhipin.com/boss/avatar/avatar_14.png",
+			"certification": 0,
+			"company": "",
+			"headImg": 14,
+			"name": "何先生",
+			"source": 0,
+			"uid": "555547565"
+		},
+		"mid": "478276949733",
+		"offline": false,
+		"pushSound": 0,
+		"pushText": "何先生:Boss您好，我对您发布的职位非常感兴趣，可以把简历发给您吗？",
+		"received": false,
+		"securityId": "XNrgMsRBSUWsk-51eXZSELBhwx4hax03nQ_b-85oqFCrMhHu_28t82Wgj_fKyGsvdTUSgpkrFNfbGF8EaSrhUeyVhriRYoQcJ1re",
+		"status": 0,
+		"taskId": "0",
+		"time": "1693579636987",
+		"to": {
+			"avatar": "https://img.bosszhipin.com/boss/avatar/avatar_6.png",
+			"certification": 0,
+			"company": "",
+			"headImg": 6,
+			"name": "高先生",
+			"source": 0,
+			"uid": "46147837"
+		},
+		"type": 3,
+		"uncount": 0
+	}],
+	"type": 1
+}

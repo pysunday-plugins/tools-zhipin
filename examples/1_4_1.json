@@ -1,0 +1,43 @@
+{
+	"type": 1,
+	"messages": [{
+		"from": {
+			"uid": "506650297",
+			"name": "张女士",
+			"avatar": "https://img.bosszhipin.com/beijin/upload/avatar/20230523/607f1f3d68754fd070b100eb5ca419cd2344fc3756dd14c8a319cb1b888d79737134244ed314af53_s.png",
+			"company": "中融汇才",
+			"headImg": 0,
+			"certification": 3,
+			"source": 0
+		},
+		"to": {
+			"uid": "619863597",
+			"name": "陈先生",
+			"avatar": "https://img.bosszhipin.com/boss/avatar/avatar_15.png",
+			"company": "",
+			"headImg": 15,
+			"certification": 0,
+			"source": 0
+		},
+		"type": 4,
+		"mid": "489197881351",
+		"time": "1695195216712",
+		"body": {
+			"type": 1,
+			"templateId": 3,
+			"text": "对方已查看您的附件简历",
+			"headTitle": "",
+			"extend": ""
+		},
+		"offline": false,
+		"received": false,
+		"pushText": "张女士:对方已查看您的附件简历",
+		"taskId": "0",
+		"cmid": "0",
+		"status": 0,
+		"uncount": 1,
+		"pushSound": 0,
+		"flag": 0,
+		"securityId": "l64b06BKzVT6X-X1QA1DpAAEToS1j2WLABaCxpSavdzErJpHbIw9dSgf1lwASaKNos4kfR26zEYP0TyvV6LsffNgsoVVt8au6fsQRw~~"
+	}]
+}

@@ -1,0 +1,54 @@
+{
+	"type": 1,
+	"messages": [{
+		"from": {
+			"uid": "506650297",
+			"name": "张女士",
+			"avatar": "https://img.bosszhipin.com/beijin/upload/avatar/20230523/607f1f3d68754fd070b100eb5ca419cd2344fc3756dd14c8a319cb1b888d79737134244ed314af53_s.png",
+			"company": "中融汇才",
+			"headImg": 0,
+			"certification": 3,
+			"source": 0
+		},
+		"to": {
+			"uid": "619863597",
+			"name": "陈先生",
+			"avatar": "https://img.bosszhipin.com/boss/avatar/avatar_15.png",
+			"company": "",
+			"headImg": 15,
+			"certification": 0,
+			"source": 0
+		},
+		"type": 3,
+		"mid": "489197836980",
+		"time": "1695195214275",
+		"body": {
+			"type": 16,
+			"templateId": 1,
+			"articles": [{
+				"title": "是否满意Ta的服务",
+				"description": "",
+				"picUrl": "https://img.bosszhipin.com/beijin/coupon/023f42cddaf7c341b4abc6a2bc6c8793a19c8610033f5fc0d101a87f8bd20888.png",
+				"url": "bosszp://bosszhipin.app/openwith?type=geekEvaluateIntermediary&intermediaryId=506650297&securityId=SjjOYAq2yawUN-Q11x4FFrEhm5P8BDcjSRuG2d_xdvJCJfLw1B0S_qn2L5wyAimQYhavX1D0ZWih6aTD9frUci5h8QP8iEUulMzUu0KtH_BBaqt06iweQqHB3qpQSLeIIkIRusH3ECUMziNfF7-F8RlxcehJYlHEXYmi4oe4c_SG8xgUPNOhBE8SRVQJjJ-MOMIJX3XcCySj5YCe0r5DkbbhKB3Hy4WLqohGfDyr7FM1dY2JX0Y1UsXRHtByr0cqYCLSilyIow7GXt75YK6F3XlvMcioZztU3yOG4pLwpv1qodsjRd9HB5vyI-dKRVm6guvr4L0W85xig995_X2P60qUL5wSMkKEaqyuAi5ocdHKXzrM04oZYhv1RMbLx2Ng4M7O6uUkkkVFyoFXW_dfUsDVHdrlpM8k5L-gGCowhfsU8z8k46EPQqCvc-16sHmh6Mqc9OYkbRjmaAfCNy6FA1yKDZLHXmFv5jE8PRaslDI4S6jetNUnpjg7iohmRQ~~&source=1",
+				"templateId": 201,
+				"bottomText": "匿名评价",
+				"timeout": "0",
+				"statisticParameters": "",
+				"subTitle": "您已经向TA发送了简历，快评价一下吧~",
+				"extend": "{\"agentStar\": 0}"
+			}],
+			"headTitle": ""
+		},
+		"offline": false,
+		"received": false,
+		"pushText": "是否满意Ta的服务",
+		"taskId": "0",
+		"cmid": "0",
+		"status": 0,
+		"uncount": 0,
+		"pushSound": 0,
+		"flag": 0,
+		"bizType": 20004,
+		"securityId": "TMmTxmJqJhCd5--1VDIlzx5G2ioTG4huAeXv5sb_FumNJoumvf9Ag5ore7lvk9XlZ-W7RKJUecgVS6PW8HrsGXbQaL6t0vvujb4YjA~~"
+	}]
+}

@@ -48,6 +48,14 @@ ZHIPIN_CMDINFO = {
                 'nargs': '?',
                 'type': int
             }
+        ],
+        'friend30': [
+            {
+                'name': ['friendId'],
+                'help': '聊过天朋友的唯一ID',
+                'nargs': '?',
+                'type': int
+            }
         ]
     }
 }
@@ -109,6 +117,11 @@ ZHIPIN_CHAT_CMDINFO = {
                 'help': '是否使用本地消息回放',
                 'default': False,
                 'action': 'store_true'
+            },
+            {
+                'name': ['-t', '--test-name'],
+                'help': '测试标签名称, 取examples目录下的文件名',
+                'dest': 'testName',
             },
         ]
     }

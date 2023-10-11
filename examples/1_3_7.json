@@ -1,0 +1,64 @@
+{
+	"type": 1,
+	"messages": [{
+		"from": {
+			"uid": "44798248",
+			"name": "匡女士",
+			"avatar": "https://img.bosszhipin.com/beijin/upload/avatar/20201110/414e350dddd0af5993ad83ac16a118ace0790bfe1f58ee3fdf17472d5319a2a0_s.jpg",
+			"company": "得逸信息",
+			"headImg": 0,
+			"certification": 3,
+			"source": 0
+		},
+		"to": {
+			"uid": "619863597",
+			"name": "陈先生",
+			"avatar": "https://img.bosszhipin.com/boss/avatar/avatar_15.png",
+			"company": "",
+			"headImg": 15,
+			"certification": 0,
+			"source": 0
+		},
+		"type": 3,
+		"mid": "489206510961",
+		"time": "1695195740262",
+		"body": {
+			"type": 7,
+			"templateId": 1,
+			"dialog": {
+				"text": "{\"city\":\"上海\",\"cityCode\":101020100,\"latitude\":31.259105,\"geoId\":\"B00155MTLP\",\"locationDesc\":\"金茂工业园区(上海普陀区金茂工业园区1)\",\"longitude\":121.415057}",
+				"buttons": [{
+					"text": "暂不考虑",
+					"url": "bosszp://bosszhipin.app/openwith?type=sendaction&uid=44798248&aid=113&userSrc=0",
+					"templateId": 1
+				}, {
+					"text": "可以接受",
+					"url": "bosszp://bosszhipin.app/openwith?type=sendaction&uid=44798248&aid=112&userSrc=0",
+					"templateId": 0
+				}],
+				"operated": false,
+				"clickMore": false,
+				"type": 17,
+				"backgroundUrl": "https://img.bosszhipin.com/beijin/upload/amap_proxy/20230807/48ba41acc9cef1bfd0d26bfb8f3703c4c0f91eae5d092b376bb61e3b7bce0931da574d19d1d82c88.jpg.webp",
+				"timeout": "0",
+				"statisticParameters": "",
+				"title": "您是否接受此工作地点?",
+				"url": "",
+				"selectedIndex": 0,
+				"extend": "",
+				"content": ""
+			},
+			"headTitle": ""
+		},
+		"offline": false,
+		"received": false,
+		"pushText": "匡女士:您是否接受此工作地点?",
+		"taskId": "0",
+		"cmid": "0",
+		"status": 0,
+		"uncount": 0,
+		"pushSound": 0,
+		"flag": 0,
+		"securityId": "mpPEaVaUiP1C1-I1PCLcCzAfAxNK0jLryTh04TJ4la92HB0mnGbu9L8cJg_jgsIB1Ta5XDh7_WnRwNnBEkq-eSydWuZK7Gu36mg5"
+	}]
+}

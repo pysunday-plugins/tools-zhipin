@@ -1,0 +1,23 @@
+{
+	"type": 4,
+	"iqResponse": {
+		"qid": "0",
+		"query": "/message/suggest",
+		"results": [{
+			"key": "friend_source",
+			"value": "0"
+		}, {
+			"key": "suggestions",
+			"value": "[]"
+		}, {
+			"key": "friendId",
+			"value": "6208440"
+		}, {
+			"key": "msg_id",
+			"value": "488017029244"
+		}, {
+			"key": "business_scene_type",
+			"value": "1"
+		}]
+	}
+}

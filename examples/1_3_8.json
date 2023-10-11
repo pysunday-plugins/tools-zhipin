@@ -1,0 +1,82 @@
+{
+	"messages": [{
+		"body": {
+			"headTitle": "您正在与Boss颜女士直接沟通如下职位",
+			"jobDesc": {
+				"boss": {
+					"avatar": "https://img.bosszhipin.com/beijin/upload/avatar/20230411/607f1f3d68754fd09eb436a340975d90bff82f434d7f5a255d71baa1dfaeb1c0091c51b954f3e816_s.jpg",
+					"certification": 0,
+					"company": "",
+					"headImg": 0,
+					"name": "颜女士",
+					"source": 0,
+					"uid": "6960630"
+				},
+				"bossTitle": "HR",
+				"bottomText": "9月1日 21:55 由你发起的沟通",
+				"city": "上海 浦东新区 唐镇",
+				"company": "实达迪美",
+				"content": "",
+				"distance": "",
+				"education": "大专",
+				"expectId": "0",
+				"expectPosition": "",
+				"expectSalary": "",
+				"experience": "3-5年",
+				"geek": {
+					"avatar": "",
+					"certification": 0,
+					"company": "",
+					"headImg": 0,
+					"name": "",
+					"source": 0,
+					"uid": "555547565"
+				},
+				"iconFlag": 0,
+				"jobId": "297597880",
+				"jobLabel": "",
+				"latlon": "",
+				"lid": "",
+				"partTimeDesc": "",
+				"positionCategory": "Java",
+				"salary": "12-14K·13薪",
+				"stage": "未融资",
+				"title": "中/高级java开发工程师（浦东唐镇）",
+				"url": "bosszp://bosszhipin.app/openwith?type=jobview&jid=297597880&uid=6960630&securityId=8RccJC4gM8y1--U11JzfcSHPeosPgDoY2OPGrMSSxOi-vyQiucQNhiBvxROpvSnj-wB-sJiIC0kmOO_vDpJvUiXrjH24pGP0nrtP2V5TgjvtTyN7EvVZ0Fo0UkJ01jUy_MNsBKDVl-VQt2XxDusMAQd3jZl_IJdtjEm_w1CICYQR0ANBTG1kXh9nCBdgks4vrJCqK-7xkKV61McKz-jPdcAB0t1LgiJRk45709OPvXEuWfAQ93yd6fw6aqM4dvoBqts5nLtksBHO1StrvYOX0LnOuv3LbuIC23d1OZCsThX_vurWkIhSUykgZhYsnmHucz8rt8zAus5nxCPikrPAPZpSwZNWcYD2xtSQxfKpGZ-QlqwtZ-7esxR1uAOEapdooVfOsJuBTeQTABcp4d4jckggy7X1Ady_V9fSjUaOTPr9t7NL22iCI955atxfmyA05uWb7tzrw2FGGuwo4JjlWO6xpwJeZgpkUpZ01eYIcVWIjqZyv3juQuMnNEvDRNmK"
+			},
+			"templateId": 1,
+			"type": 8
+		},
+		"cmid": "0",
+		"flag": 0,
+		"from": {
+			"avatar": "https://img.bosszhipin.com/beijin/upload/avatar/20230411/607f1f3d68754fd09eb436a340975d90bff82f434d7f5a255d71baa1dfaeb1c0091c51b954f3e816_s.jpg",
+			"certification": 3,
+			"company": "实达迪美",
+			"headImg": 0,
+			"name": "颜女士",
+			"source": 0,
+			"uid": "6960630"
+		},
+		"mid": "478262811328",
+		"offline": false,
+		"pushSound": 0,
+		"received": false,
+		"securityId": "8RccJC4gM8y1--U11JzfcSHPeosPgDoY2OPGrMSSxOi-vyQiucQNhiBvxROpvSnj-wB-sJiIC0kmOO_vDpJvUiXrjH24pGP0nrtP2V5TgjvtTyN7EvVZ0Fo0UkJ01jUy_MNsBKDVl-VQt2XxDusMAQd3jZl_IJdtjEm_w1CICYQR0ANBTG1kXh9nCBdgks4vrJCqK-7xkKV61McKz-jPdcAB0t1LgiJRk45709OPvXEuWfAQ93yd6fw6aqM4dvoBqts5nLtksBHO1StrvYOX0LnOuv3LbuIC23d1OZCsThX_vurWkIhSUykgZhYsnmHucz8rt8zAus5nxCPikrPAPZpSwZNWcYD2xtSQxfKpGZ-QlqwtZ-7esxR1uAOEapdooVfOsJuBTeQTABcp4d4jckggy7X1Ady_V9fSjUaOTPr9t7NL22iCI955atxfmyA05uWb7tzrw2FGGuwo4JjlWO6xpwJeZgpkUpZ01eYIcVWIjqZyv3juQuMnNEvDRNmK",
+		"status": 0,
+		"taskId": "0",
+		"time": "1693576506581",
+		"to": {
+			"avatar": "https://img.bosszhipin.com/boss/avatar/avatar_14.png",
+			"certification": 0,
+			"company": "",
+			"headImg": 14,
+			"name": "何先生",
+			"source": 0,
+			"uid": "555547565"
+		},
+		"type": 3,
+		"uncount": 1
+	}],
+	"type": 1
+}

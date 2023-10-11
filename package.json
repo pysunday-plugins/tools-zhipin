@@ -5,12 +5,12 @@
   "description": "zhipin工具集合",
   "bin": ["zhipin", "zhipin_chat", "zhipin_login2brower"],
   "depend": [
-    "pysunday/login-zhipin#main",
-    "pysunday/tools-imrobot#main"
   ],
   "keywords": [
     "sunday",
-    "tools"
+    "tools",
+    "pysunday/login-zhipin#main",
+    "pysunday/tools-imrobot#main"
   ],
   "author": "ct"
 }

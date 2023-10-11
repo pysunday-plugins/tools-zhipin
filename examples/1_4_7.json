@@ -1,0 +1,60 @@
+{
+	"type": 1,
+	"messages": [{
+		"from": {
+			"uid": "33151861",
+			"name": "王智",
+			"avatar": "https://img.bosszhipin.com/beijin/upload/tmp/20220303/a2f3e71d9181a67b501d4cab2bd21168aae564fcee45a3292340599c1adf7866b8ed6a374ced0951_s.jpg",
+			"company": "太平洋房屋",
+			"headImg": 0,
+			"certification": 3,
+			"source": 0
+		},
+		"to": {
+			"uid": "555547565",
+			"name": "何先生",
+			"avatar": "https://img.bosszhipin.com/boss/avatar/avatar_14.png",
+			"company": "",
+			"headImg": 14,
+			"certification": 0,
+			"source": 0
+		},
+		"type": 4,
+		"mid": "489029980003",
+		"time": "1695182653531",
+		"body": {
+			"type": 7,
+			"templateId": 1,
+			"dialog": {
+				"text": "我觉得你很适合我们的岗位，你可以直接跟我互换电话联系我",
+				"buttons": [{
+					"text": "电话联系TA",
+					"url": "bosszp://bosszhipin.app/openwith?type=contactAssistCall&friendId=33151861&friendSource=0",
+					"templateId": 0
+				}],
+				"operated": false,
+				"clickMore": false,
+				"type": 26,
+				"backgroundUrl": "",
+				"timeout": "0",
+				"statisticParameters": "",
+				"title": "",
+				"url": "https://img.bosszhipin.com/beijin/upload/tmp/20220303/a2f3e71d9181a67b501d4cab2bd21168aae564fcee45a3292340599c1adf7866b8ed6a374ced0951_s.jpg",
+				"selectedIndex": 0,
+				"extend": "",
+				"content": ""
+			},
+			"headTitle": ""
+		},
+		"offline": false,
+		"received": false,
+		"pushText": "王智:我觉得你很适合我们的岗位，你可以直接跟我互换电话联系我",
+		"taskId": "0",
+		"cmid": "0",
+		"status": 0,
+		"uncount": 1,
+		"pushSound": 0,
+		"flag": 0,
+		"securityId": "hBRwyoWBF8lJe-A1PviIwgF9rzJKINAkjN0nyd9MsHvenWFtM7ATzSeJLb6wceiZ8S8b6nlI4d3dWH-_W6DS9hTU6cjbdwpvJ27G"
+	}]
+}

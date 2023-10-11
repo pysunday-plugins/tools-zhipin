@@ -1,0 +1,61 @@
+{
+	"messages": [{
+		"bizType": 317,
+		"body": {
+			"articles": [{
+				"bottomText": "查看详细分析",
+				"description": "优秀竞争者会**，建议你**",
+				"extend": "{\"descriptionHighParts\":[{\"endIndex\":8,\"startIndex\":6},{\"endIndex\":14,\"startIndex\":12}],\"avatarList\":[\"https://img.bosszhipin.com/beijin/upload/item/20221117/e84be512208dcc092305e09ca262fbca80aac447b332b5156bb61e3b7bce0931da574d19d1d82c88.png\",\"https://img.bosszhipin.com/beijin/upload/item/20221117/e84be512208dcc09b8863ef1285e51d37ff4ef2d571b62b66bb61e3b7bce0931da574d19d1d82c88.png\",\"https://img.bosszhipin.com/beijin/upload/item/20221117/e84be512208dcc0941137f1d4ae2547a3eb5afd8cded2d436bb61e3b7bce0931da574d19d1d82c88.png\"]}",
+				"highlightParts": [{
+					"endIndex": 3,
+					"startIndex": 1
+				}, {
+					"endIndex": 12,
+					"startIndex": 10
+				}],
+				"picUrl": "https://img.bosszhipin.com/beijin/icon/bed51f39faf420a15620181baffee482f7aba6f40b0808dd3b1d96fc3abbc5af.png",
+				"statisticParameters": "",
+				"subTitle": "共**人投递，你超过**竞争者",
+				"templateId": 201,
+				"timeout": "0",
+				"title": "你与该职位竞争者PK情况",
+				"url": "https://m.zhipin.com/mpa/html/props/transit?targetId=f46e25b5d952fc531X193tS6GFpQ&sendNum=0"
+			}],
+			"headTitle": "",
+			"templateId": 1,
+			"type": 16
+		},
+		"cmid": "0",
+		"flag": 0,
+		"from": {
+			"avatar": "https://img.bosszhipin.com/beijin/upload/avatar/20230411/607f1f3d68754fd09eb436a340975d90bff82f434d7f5a255d71baa1dfaeb1c0091c51b954f3e816_s.jpg",
+			"certification": 3,
+			"company": "实达迪美",
+			"headImg": 0,
+			"name": "颜女士",
+			"source": 0,
+			"uid": "6960630"
+		},
+		"mid": "478262811743",
+		"offline": false,
+		"pushSound": 0,
+		"pushText": "你与该职位竞争者PK情况",
+		"received": false,
+		"securityId": "d9sG2LpjX3BlZ-J1F3WJdcXtvKPHa4owA3BcZ6GmfTWaPX4jTCQwk4_5TjTgBaJvYussRvCo4fmXqMia3gK8_KTsD0faEl5rR9U~",
+		"status": 0,
+		"taskId": "0",
+		"time": "1693576506649",
+		"to": {
+			"avatar": "https://img.bosszhipin.com/boss/avatar/avatar_14.png",
+			"certification": 0,
+			"company": "",
+			"headImg": 14,
+			"name": "何先生",
+			"source": 0,
+			"uid": "555547565"
+		},
+		"type": 4,
+		"uncount": 1
+	}],
+	"type": 1
+}

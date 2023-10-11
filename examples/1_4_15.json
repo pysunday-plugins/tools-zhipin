@@ -1,0 +1,53 @@
+{
+	"messages": [{
+		"bizType": 10008,
+		"body": {
+			"articles": [{
+				"bottomText": "",
+				"description": "",
+				"extend": "{\"greetingQuestionAnswer\":1}",
+				"picUrl": "https://img.bosszhipin.com/beijin/icon/2fd625e1e607c8ea88f99c0339049a50473d300d755a0ce51c420256596735d7.png",
+				"statisticParameters": "",
+				"subTitle": "把你的想法展示给boss",
+				"templateId": 201,
+				"timeout": "0",
+				"title": "你是否有进行多任务管理的经验？你是如何做到的？",
+				"url": ""
+			}],
+			"headTitle": "",
+			"templateId": 1,
+			"type": 15
+		},
+		"cmid": "0",
+		"flag": 0,
+		"from": {
+			"avatar": "https://img.bosszhipin.com/boss/avatar/avatar_6.png",
+			"certification": 3,
+			"company": "长投学堂",
+			"headImg": 6,
+			"name": "高先生",
+			"source": 0,
+			"uid": "46147837"
+		},
+		"mid": "478276949748",
+		"offline": false,
+		"pushSound": 0,
+		"received": false,
+		"securityId": "AIDpadFJ4T9Zz-x1oFlDOJkY2jN9t4Hxp1tzevbRHN3Pq0_E1Hjopv-kEnNJaYx843gKpC4SZXmD84hgbw1oLsYv8SZawT4aCRl1",
+		"status": 0,
+		"taskId": "0",
+		"time": "1693579637024",
+		"to": {
+			"avatar": "https://img.bosszhipin.com/boss/avatar/avatar_14.png",
+			"certification": 0,
+			"company": "",
+			"headImg": 14,
+			"name": "何先生",
+			"source": 0,
+			"uid": "555547565"
+		},
+		"type": 4,
+		"uncount": 1
+	}],
+	"type": 1
+}

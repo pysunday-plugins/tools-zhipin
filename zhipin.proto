@@ -1,3 +1,4 @@
+// 文件最后一行：https://static.zhipin.com/v2/web/common/mqtt-v2.1.min.js
 syntax = "proto2";
 option java_package = "cn.techwolf.boss.chat";
 option java_outer_classname = "ChatProtocol";

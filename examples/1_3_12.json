@@ -1,0 +1,47 @@
+{
+	"type": 1,
+	"messages": [{
+		"from": {
+			"uid": "44798248",
+			"name": "匡女士",
+			"avatar": "https://img.bosszhipin.com/beijin/upload/avatar/20201110/414e350dddd0af5993ad83ac16a118ace0790bfe1f58ee3fdf17472d5319a2a0_s.jpg",
+			"company": "得逸信息",
+			"headImg": 0,
+			"certification": 3,
+			"source": 0
+		},
+		"to": {
+			"uid": "619863597",
+			"name": "陈先生",
+			"avatar": "https://img.bosszhipin.com/boss/avatar/avatar_15.png",
+			"company": "",
+			"headImg": 15,
+			"certification": 0,
+			"source": 0
+		},
+		"type": 3,
+		"mid": "489205196165",
+		"time": "1695195660571",
+		"body": {
+			"type": 12,
+			"templateId": 1,
+			"headTitle": "",
+			"hyperLink": {
+				"text": "您的附件简历 Python-陈... 已发送给Boss点击查看附件",
+				"url": "bosszp://bosszhipin.app/openwith?type=openFile&url=https%3A%2F%2Fm.zhipin.com%2Fwapi%2Fzpupload%2Fresume%2Fdownload%3FencryptParam%3Dcb35436962eb3b680XVz09u-FVtX0Y68WfqfRealn-TPfFB9nPIQ3-K5OoWwCwxULuKXy-QtOdH5ukx8GosJzCtj4Y4vvI1tSFTvhbNiP-z5KJEH6ey6D2opZFsQ6nVAqf_cSQF2UbO2BRk4zYwZGGimt_hTuw1-KIiSjnV-RRAdtiObR_volfoFRpxbo7IW&encryptUrl=yD46xJ_oUxcNl5O4VamaE-KhnKTUZBhmivUFzri5dtPiUF1UKOPAm-IsY8irvhMoFI1az3VotYkuvt1qDk29heIwSraEEtdQtLPlXmJ8NQo15Q4KoL32cgtHYe3gCwZamZtPC3OKia1qjw9sAKy3mw~~&fileType=pdf&fileSize=653667&annexType=0&title=个人简历&showUpload=0&id=bb8e9c2a091d14421XB92t21EVdVwQ~~&ba=%7B%22action%22%3A%22userinfo-annexresume-chat-detresume%22%7D",
+				"hyperLinkType": 6,
+				"extraJson": "{\"highlightLength\":6,\"highlightStart\":27}"
+			}
+		},
+		"offline": false,
+		"received": false,
+		"pushText": "您的附件简历 Python-陈... 已发送给Boss点击查看附件",
+		"taskId": "0",
+		"cmid": "0",
+		"status": 0,
+		"uncount": 0,
+		"pushSound": 0,
+		"flag": 0,
+		"securityId": "41jr9tr0yks4O-K1EV9MXzd80okQEP0ud8JSSqAYVGjgn2lFb5p0chSimPTmP55t5Y-jxN5cHjALrtJGUubhbj5dyHgXsCZuJZft"
+	}]
+}

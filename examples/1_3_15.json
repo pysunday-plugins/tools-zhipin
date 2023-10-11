@@ -1,0 +1,65 @@
+{
+	"type": 1,
+	"messages": [{
+		"from": {
+			"uid": "797",
+			"name": "道具通知",
+			"avatar": "https://img2.bosszhipin.com/app/android/itemEffect-bdc645ecbceb7dc4f740ecf40cb4c5d5.png",
+			"company": "",
+			"headImg": 0,
+			"certification": 0,
+			"source": 0
+		},
+		"to": {
+			"uid": "555547565",
+			"name": "何先生",
+			"avatar": "https://img.bosszhipin.com/boss/avatar/avatar_14.png",
+			"company": "",
+			"headImg": 14,
+			"certification": 0,
+			"source": 0
+		},
+		"type": 3,
+		"mid": "488667271375",
+		"time": "1695116782471",
+		"body": {
+			"type": 15,
+			"templateId": 1,
+			"articles": [{
+				"title": "简历还没准备好？有福利！速领！",
+				"description": "一键生成简历附件，快速投递offer拿不停！",
+				"picUrl": "https://img.bosszhipin.com//1672216475abf56855f60a4efa8988339b7986cce5.png",
+				"url": "bosszp://bosszhipin.app/openwith?type=webview&url=https%3A%2F%2Fm.zhipin.com%2Fmpa%2Fhtml%2Fresume-detail%2Fresume-export%2Fselect&ba=%7B%22action%22%3A%22push-card-click%22%2C%22p%22%3A%2260054980%22%2C%22p2%22%3A%221695116782471%22%2C%22p3%22%3A%221153748938080194560%22%2C%22p4%22%3A%221059%22%2C%22p5%22%3A502%2C%22p6%22%3A%22bosszp%3A%2F%2Fbosszhipin.app%2Fopenwith%3Ftype%3Dwebview%26url%3Dhttps%253A%252F%252Fm.zhipin.com%252Fmpa%252Fhtml%252Fresume-detail%252Fresume-export%252Fselect%22%2C%22p7%22%3A%22%E7%AE%80%E5%8E%86%E8%BF%98%E6%B2%A1%E5%87%86%E5%A4%87%E5%A5%BD%EF%BC%9F%E6%9C%89%E7%A6%8F%E5%88%A9%EF%BC%81%E9%80%9F%E9%A2%86%EF%BC%81%22%2C%22p8%22%3A%22%E4%B8%80%E9%94%AE%E7%94%9F%E6%88%90%E7%AE%80%E5%8E%86%E9%99%84%E4%BB%B6%EF%BC%8C%E5%BF%AB%E9%80%9F%E6%8A%95%E9%80%92offer%E6%8B%BF%E4%B8%8D%E5%81%9C%EF%BC%81%22%7D",
+				"templateId": 0,
+				"bottomText": "点击查看",
+				"timeout": "0",
+				"statisticParameters": "",
+				"subTitle": "",
+				"extend": ""
+			}, {
+				"title": "请在APP打开查看",
+				"description": "",
+				"picUrl": "",
+				"url": "bosszp://bosszhipin.pc/openPage",
+				"templateId": 0,
+				"bottomText": "",
+				"timeout": "0",
+				"statisticParameters": "",
+				"subTitle": "",
+				"extend": ""
+			}],
+			"headTitle": ""
+		},
+		"offline": false,
+		"received": false,
+		"taskId": "-60054980",
+		"cmid": "0",
+		"status": 0,
+		"uncount": 0,
+		"pushSound": 0,
+		"flag": 0,
+		"bizId": "1153748938080194560",
+		"bizType": 60054980,
+		"securityId": "ttcfSMFIigtEK-U1jCTfBHS6PQNHYiNo9oVIi1sx2YuZYynZfmXZ-9p6DPm7kRaJ_r3LZLOlsI_bIPi4ciLE9K7G9tY_2A~~"
+	}]
+}

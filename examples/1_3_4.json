@@ -1,0 +1,44 @@
+{
+	"messages": [{
+		"body": {
+			"action": {
+				"aid": 51,
+				"extend": "{\"jobId\":297597880,\"expectId\":425851219,\"syncInfo\":1}"
+			},
+			"headTitle": "",
+			"templateId": 1,
+			"type": 4
+		},
+		"cmid": "0",
+		"flag": 0,
+		"from": {
+			"avatar": "https://img.bosszhipin.com/beijin/upload/avatar/20230411/607f1f3d68754fd09eb436a340975d90bff82f434d7f5a255d71baa1dfaeb1c0091c51b954f3e816_s.jpg",
+			"certification": 3,
+			"company": "实达迪美",
+			"headImg": 0,
+			"name": "颜女士",
+			"source": 0,
+			"uid": "6960630"
+		},
+		"mid": "478262811463",
+		"offline": false,
+		"pushSound": 0,
+		"received": false,
+		"securityId": "X8RopW7DZKiSA-U1ewRhKHYVo12eE8FVYU5nfVKhETEZbBpQJE-uhUPBk8bOLBH0Vn_iySJyjx642msPk0dSEvvlWPf3yeae874nDrgtr0ChMUoM9dX_GaCz7-aJgwVu7bX1qMqAW2UslYOLEEiDPB6g8u7GFiBNaKQv_pC573wytQI6Rd0uB-C87KUvwQn1Ck1_0wccydXCfv-dTKi2IxhcMaDHBQnY97KSY7ZkZdb8grILl6OhPbs4VlkXXPOYA4Ci2ex_V89RJwyYPbhQXwEc5aO5t-blQs7HUxwqA1Ba-gJJtRTB60JDRc00JTzZjYRNuau5jgRs2oLSJ2gAtETTpdrzZwlcfIa-0yzW_qhti2jXG2V-CUsd6nt49AguTUZQDe1UrmqU7hHv1xeWcgKlUoxf-xGsmi0ia7mddcNOzDxQ7s0jh7Lk9mM1M2cCPSAs9Jl-zfrNt3yrQrwoBmzC4kCKyTy7e5NbymhLKJwd_HjbvDktUXa1iRoKHecrgebGNw~~",
+		"status": 0,
+		"taskId": "0",
+		"time": "1693576506586",
+		"to": {
+			"avatar": "https://img.bosszhipin.com/boss/avatar/avatar_14.png",
+			"certification": 0,
+			"company": "",
+			"headImg": 14,
+			"name": "何先生",
+			"source": 0,
+			"uid": "555547565"
+		},
+		"type": 3,
+		"uncount": 1
+	}],
+	"type": 1
+}

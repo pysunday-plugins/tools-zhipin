@@ -1,0 +1,43 @@
+{
+	"type": 1,
+	"messages": [{
+		"to": {
+			"uid": "555547565",
+			"name": "何先生",
+			"avatar": "https://img.bosszhipin.com/boss/avatar/avatar_14.png",
+			"company": "",
+			"headImg": 14,
+			"certification": 0,
+			"source": 0
+		},
+		"from": {
+			"uid": "53429627",
+			"name": "孙嘉临",
+			"avatar": "https://img.bosszhipin.com/beijin/upload/avatar/20191222/a57d75d2e4c9848c4a0aca63d500835c0b6972a2c384aa184ded46a25ce50bd0_s.jpg",
+			"company": "",
+			"headImg": 0,
+			"certification": 0,
+			"source": 0
+		},
+		"type": 1,
+		"mid": "488015689191",
+		"time": "1695034968189",
+		"body": {
+			"type": 1,
+			"templateId": 1,
+			"text": "上海今天天气如何",
+			"headTitle": "",
+			"extend": ""
+		},
+		"offline": false,
+		"received": false,
+		"pushText": "何先生:哪个车企？",
+		"taskId": "0",
+		"cmid": "1695034967293",
+		"status": 0,
+		"uncount": 0,
+		"pushSound": 0,
+		"flag": 65536,
+		"securityId": "R3JXnOv9f69K7-D15A7NkdmYgi2nGZcES9JZ2AC5eF1Nf7ouZDiALinZwg-ctGcghNrAS5Qd4xqxmYo8yGDzhX1rRE7LuEQv9-TN"
+	}]
+}

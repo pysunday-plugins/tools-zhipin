@@ -1,0 +1,66 @@
+{
+	"type": 1,
+	"messages": [{
+		"from": {
+			"uid": "42159005",
+			"name": "吕女士",
+			"avatar": "https://img.bosszhipin.com/beijin/upload/avatar/20210812/7dbcbe6018b12257da27f36200c1c6c5673bae130c449921ad2d0cfb29baf5ca_s.jpg",
+			"company": "中电金信软件有限公司",
+			"headImg": 0,
+			"certification": 3,
+			"source": 0
+		},
+		"to": {
+			"uid": "555547565",
+			"name": "何先生",
+			"avatar": "https://img.bosszhipin.com/boss/avatar/avatar_14.png",
+			"company": "",
+			"headImg": 14,
+			"certification": 0,
+			"source": 0
+		},
+		"type": 1,
+		"mid": "488282599136",
+		"time": "1695091527100",
+		"body": {
+			"type": 7,
+			"templateId": 1,
+			"dialog": {
+				"text": "我想要一份您的附件简历，您是否同意",
+				"buttons": [{
+					"text": "同意",
+					"url": "bosszp://bosszhipin.app/openwith?type=sendaction&uid=42159005&aid=38&extends={}",
+					"templateId": 0
+				}, {
+					"text": "拒绝",
+					"url": "bosszp://bosszhipin.app/openwith?type=sendaction&uid=42159005&aid=39&extends={}",
+					"templateId": 1
+				}],
+				"operated": false,
+				"clickMore": false,
+				"type": 2,
+				"backgroundUrl": "",
+				"timeout": "0",
+				"statisticParameters": "",
+				"title": "",
+				"url": "",
+				"selectedIndex": 0,
+				"extend": "{}",
+				"content": ""
+			},
+			"headTitle": ""
+		},
+		"offline": false,
+		"received": false,
+		"pushText": "吕女士:我想要一份您的附件简历，您是否同意",
+		"taskId": "0",
+		"cmid": "0",
+		"status": 0,
+		"uncount": 0,
+		"pushSound": 0,
+		"flag": 65536,
+		"bizId": "488282598388",
+		"bizType": 13,
+		"securityId": "2fECllbeFRUNE-S1EIU5bdrViEzYtPdWVeD4t80EcWfkM03wOpAx5LIUl-fqbrcV-Hc50K_I_WjmrM7DobL8O3b-ipq630Ttg1qB"
+	}]
+}

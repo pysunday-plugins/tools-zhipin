@@ -6,7 +6,7 @@ import argparse
 from pprint import pprint
 from urllib.parse import urlencode
 from sunday.tools.zhipin import config
-from sunday.login.zhipin import Zhipin as ZhipinLogin
+from sunday.login.zhipin.login_by_cmd_0918 import Zhipin as ZhipinLogin
 from sunday.login.zhipin.config import getUserInfo
 from sunday.tools.zhipin.params import ZHIPIN_CMDINFO
 from sunday.core import Logger, getParser, Fetch
@@ -15,9 +15,9 @@ from pydash import get, find
 class Zhipin():
     def __init__(self, isInit=True):
         self.logger = Logger('ZHIPIN HANDLER').getLogger()
-        self.userInfo = None
         self.geekFriendList = None
         self.bossInfo = {}
+        self.getData()
         if isInit: self.init()
 
     def init(self):
@@ -25,22 +25,25 @@ class Zhipin():
         self.zhipin.login()
         self.rs = self.zhipin.rs
 
+    def getData(self, key=None, val=None):
+        if key is None:
+            self.cache_data = {}
+        elif key in self.cache_data:
+            return self.cache_data[key]
+        elif val:
+            self.cache_data[key] = val() if callable(val) else val
+            return self.cache_data[key]
+        else:
+            return lambda val: self.cache_data.update({ key: val })
+
     def getUserInfo(self):
-        if self.userInfo: return self.userInfo
-        self.userInfo = self.rs.get(getUserInfo).json()['zpData']
-        # self.logger.debug('userInfo: %s' % self.userInfo)
-        return self.userInfo
+        return self.getData('userInfo', lambda: get(self.rs.get_json(getUserInfo), 'zpData'))
 
     def getToken(self):
-        token = self.getUserInfo()['token']
-        # self.logger.debug('token: %s' % token)
-        return token
+        return self.getData('token', lambda: self.getUserInfo()['token'])
 
     def getPassword(self):
-        wt = self.rs.get(config.wt).json()
-        password = get(wt, 'zpData.wt2')
-        # self.logger.debug('password: %s' % password)
-        return password
+        return self.getData('password', lambda: get(self.rs.get_json(config.wt), 'zpData.wt2'))
 
     def getCookies(self):
         cookieObj = self.rs.getCookiesDict()
@@ -51,7 +54,7 @@ class Zhipin():
 
     def getGeekFriendList(self):
         if not self.geekFriendList:
-            res = self.rs.get(config.getGeekFriendListUrl).json()
+            res = self.rs.get_json(config.getGeekFriendListUrl)
             self.geekFriendList = get(res, 'zpData.result')
             # self.logger.debug('geekFriendList: %s' % self.geekFriendList)
         return self.geekFriendList
@@ -62,8 +65,21 @@ class Zhipin():
         # self.logger.debug('getGeekFriend: %d => %s' % (int(uid), friend))
         return friend
 
-    def bossdata(self, uid, source=0):
-        res = self.rs.get(config.bossdataUrl % (int(uid), source)).json()
+    def getFriendBy30DaysList(self):
+        res = self.rs.get_json(config.friendBy30DaysUrl)
+        return get(res, 'zpData.friendList')
+
+    def getFriendBy30Days(self, uid):
+        friends = self.getFriendBy30DaysList()
+        friend = find(friends, lambda f: f.get('friendId') == int(uid))
+        return friend
+
+    def bossdata(self, uid):
+        friend = self.getFriendBy30Days(uid)
+        if not friend: return
+        id = friend.get('encryptFriendId')
+        source = friend.get('friendSource')
+        res = self.rs.get_json(config.bossdataUrl % (id, source))
         ans = (get(res, 'zpData.data'), get(res, 'zpData.job'))
         # self.logger.debug('bossdata: %d => %s' % (int(uid), ans))
         return ans
@@ -141,6 +157,13 @@ class ZhipinSelf(Zhipin):
         else:
             pprint(self.getGeekFriendList())
 
+    def friend30Handler(self):
+        # 历史聊天用户信息
+        if self.friendId:
+            pprint(self.getFriendBy30Days(self.friendId))
+        else:
+            pprint(self.getFriendBy30DaysList())
+
     def historyHandler(self):
         # history子命令
         if len(self.bossId):
@@ -160,6 +183,8 @@ class ZhipinSelf(Zhipin):
             self.userHandler()
         elif self.subName == 'friend':
             self.friendHandler()
+        elif self.subName == 'friend30':
+            self.friend30Handler()
         elif self.subName == 'history':
             self.historyHandler()
         elif self.subName == 'job':

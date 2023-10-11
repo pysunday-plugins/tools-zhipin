@@ -1,0 +1,53 @@
+{
+	"type": 1,
+	"messages": [{
+		"from": {
+			"uid": "614279153",
+			"name": "陈先生",
+			"avatar": "https://img.bosszhipin.com/boss/avatar/avatar_6.png",
+			"company": "永力信息",
+			"headImg": 6,
+			"certification": 3,
+			"source": 0
+		},
+		"to": {
+			"uid": "619863597",
+			"name": "陈先生",
+			"avatar": "https://img.bosszhipin.com/boss/avatar/avatar_15.png",
+			"company": "",
+			"headImg": 15,
+			"certification": 0,
+			"source": 0
+		},
+		"type": 1,
+		"mid": "489648261706",
+		"time": "1695266867723",
+		"body": {
+			"type": 3,
+			"templateId": 1,
+			"image": {
+				"tinyImage": {
+					"url": "https://imgaz.bosszhipin.com/beijin/zp/chat/file/20230908/ff9281aff23153df30e16e3bca3edef224b63d0294895de304cd27b29e7b36463f6ef013765d3f96_s.jpg.webp?auth_key=1695266820-0-9f7988b6e49e685c0XVz09u+FVtX-b6ebe8f0d682375ad8e8c61a89d6b23a",
+					"width": 200,
+					"height": 406
+				},
+				"originImage": {
+					"url": "https://imgaz.bosszhipin.com/beijin/zp/chat/file/20230908/ff9281aff23153df30e16e3bca3edef224b63d0294895de304cd27b29e7b36463f6ef013765d3f96.jpg.webp?auth_key=1695266820-0-9f7988b6e49e685c0XVz09u+FVtX-39efdd832211a291dce62c887c5289c7",
+					"width": 1242,
+					"height": 2523
+				}
+			},
+			"headTitle": ""
+		},
+		"offline": false,
+		"received": false,
+		"pushText": "陈先生发来一张图片",
+		"taskId": "0",
+		"cmid": "1695881113893",
+		"status": 0,
+		"uncount": 0,
+		"pushSound": 0,
+		"flag": 0,
+		"securityId": "HX0SlopcbCnZF-G18zO2RDUoe8PjYb6iWeWZ-DiQX8OLt5_lKEcssSdM2vW5YBUMGs1SdXTunN7GZJLI5G_f3O2y-MAr7evgvHDy2A~~"
+	}]
+}

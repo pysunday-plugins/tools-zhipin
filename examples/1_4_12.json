@@ -1,0 +1,47 @@
+{
+	"type": 1,
+	"messages": [{
+		"from": {
+			"uid": "42903815",
+			"name": "徐女士",
+			"avatar": "https://img.bosszhipin.com/beijin/upload/avatar/20230707/607f1f3d68754fd03b0a83d3de31589f2191faa100c0ca6aaea7bff72c56dea8c7cf0d75907546af_s.png.webp",
+			"company": "饭饭之交",
+			"headImg": 0,
+			"certification": 3,
+			"source": 0
+		},
+		"to": {
+			"uid": "555547565",
+			"name": "何先生",
+			"avatar": "https://img.bosszhipin.com/boss/avatar/avatar_14.png",
+			"company": "",
+			"headImg": 14,
+			"certification": 0,
+			"source": 0
+		},
+		"type": 4,
+		"mid": "488667268506",
+		"time": "1695116782226",
+		"body": {
+			"type": 12,
+			"templateId": 1,
+			"headTitle": "",
+			"hyperLink": {
+				"text": "点击修改去设置中修改打招呼语",
+				"url": "bosszp://bosszhipin.app/openwith?type=openchatguidesetting",
+				"hyperLinkType": 6,
+				"extraJson": "{\"highlightLength\":2,\"highlightStart\":2}"
+			}
+		},
+		"offline": false,
+		"received": false,
+		"pushText": "点击修改去设置中修改打招呼语",
+		"taskId": "0",
+		"cmid": "0",
+		"status": 0,
+		"uncount": 1,
+		"pushSound": 0,
+		"flag": 0,
+		"securityId": "FQiqQLnUnbeX_-A1SeP6mkkfSqhaQsGQJKdxA9bJy0tot3icHQ-4EAlSr_qwB_ckeEzYlpKJReeoUQrf2zdIGaqidse1cCI-o97R"
+	}]
+}
