@@ -4,6 +4,7 @@ import random
 import json
 import os
 import argparse
+from datetime import datetime
 from copy import deepcopy
 from sunday.tools.zhipin.zhipin import ZhipinWeb, Zhipin
 from sunday.tools.zhipin.message import chatProtocolDecode
@@ -77,7 +78,7 @@ CMDINFO = {
 selfFlagKey = '@selfflag'
 
 defaultTip = {
-    'rebotTip': '回复数字启用对应聊天机器人\n[1000] ChatGPT\n[1001] 小i\n[1002] 茉莉\n[1003] 青云客\n[1004] 关闭聊天机器人',
+    'rebotTip': '回复数字启用对应聊天机器人\n[1001] 小i\n[1002] 茉莉\n[1003] 青云客\n[1004] 关闭聊天机器人',
     'rebotMoli': '已开启聊天机器人，回复信息由茉莉提供',
     'rebotQingyunke': '已开启聊天机器人，回复信息由青云客提供',
     'rebotXiaoi': '已开启聊天机器人，回复信息由小i提供',
@@ -149,9 +150,9 @@ class ZhipinClient(Mqtt):
         bossName = get(msg, 'from.name')
         if body_text == '100':
             text = defaultTip['rebotTip']
-        elif body_text == '1000':
-            text = defaultTip['rebotChatGPT']
-            self.bossConfig(bossId, 'robot', 'chatgpt')
+        # elif body_text == '1000':
+        #     text = defaultTip['rebotChatGPT']
+        #     self.bossConfig(bossId, 'robot', 'chatgpt')
         elif body_text == '1001':
             text = defaultTip['rebotXiaoi']
             self.bossConfig(bossId, 'robot', 'xiaoi')
@@ -165,7 +166,9 @@ class ZhipinClient(Mqtt):
             text = defaultTip['rebotClose']
             self.bossConfig(bossId, 'robot', False)
         elif body_text == '101':
-            text = defaultTip['firstTip'] % (get(msg, 'from.name'), self.selfMessageObj['tip'])
+            firstTip = self.selfMessageObj.get('firstTip') or defaultTip['firstTip']
+            currentTime = "当前时间：%s\n" % datetime.now().strftime('%H:%M:%S')
+            text = currentTime + firstTip % (get(msg, 'from.name'), self.selfMessageObj['tip'])
         elif self.selfMessageObj.get(body_text):
             # 配置指令
             text = body_text
