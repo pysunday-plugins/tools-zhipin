@@ -1,12 +1,12 @@
 import os
 from sunday.tools.imrobot import Xiaoi, Moli, Qingyunke
 from sunday.core import enver, Logger
-from sunday.tools.gpt.ask import GptAsk
+# from sunday.tools.gpt.ask import GptAsk
 logger = Logger('机器人初始化').getLogger()
 
 robotNameMap = {
     'xiaoi': '小i',
-    'chatgpt': 'ChatGPT',
+    # 'chatgpt': 'ChatGPT',
     'moli': '茉莉',
     'qingyunke': '青云客'
 }

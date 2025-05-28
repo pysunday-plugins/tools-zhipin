@@ -4,9 +4,9 @@
 
 # 安装插件
 
-该插件依赖[sunday](https://github.com/pysunday/pysunday), 需要先安装sunday
+该插件依赖[sunday](https://pysunday.github.io), 需要先安装PySunday
 
-执行sunday安装目录：`sunday_install pysunday/tools-zhipin`
+执行PySunday安装该插件：`sunday_install pysunday-plugins/tools-zhipin`
 
 ## zhipin命令使用
 

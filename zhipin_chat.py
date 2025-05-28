@@ -1,15 +1,12 @@
 # coding: utf-8
-import time
-import random
 import json
 import os
 import argparse
 from datetime import datetime
 from copy import deepcopy
 from sunday.tools.zhipin.zhipin import ZhipinWeb, Zhipin
-from sunday.tools.zhipin.message import chatProtocolDecode
-from sunday.tools.zhipin.handler import presenceHandler, textHandler, iqHandler, readHandler
-from sunday.core import Logger, getParser, getParserDefault
+from sunday.tools.zhipin.handler import textHandler
+from sunday.core import getParser, getParserDefault
 from pydash import get
 from sunday.tools.zhipin.initialize import robotInit
 from sunday.tools.zhipin.meta_class import Mqtt
@@ -106,6 +103,9 @@ class ZhipinClient(Mqtt):
         # 传入机器人类型及消息文本，请求对应机器人答复
         self.robotAsk = None
         self.cache_data = {}
+        # 定义默认值减少语法检测报错
+        self.testName = ''
+        self.msgConfigFile = self.isRobotDefaultOpen = self.isRobot = self.msgCacheFileIn = self.msgCacheFileOut = None
 
     def bossConfig(self, uid, key=None, val=None):
         if key is None or uid not in self.cache_data:
